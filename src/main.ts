@@ -6,6 +6,7 @@ import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
 import { Logger, ValidationPipe, VersioningType } from '@nestjs/common';
 
 import AppModule from './app.module';
+import {GlobalExceptionFilter} from './common/filters';
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
@@ -14,6 +15,9 @@ async function bootstrap() {
 
   // Config declarations
   const configService = app.get(ConfigService);
+
+  // Filters configuration
+  app.useGlobalFilters(new GlobalExceptionFilter());
 
   // Api configuration
   app.setGlobalPrefix('');
