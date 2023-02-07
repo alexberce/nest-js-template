@@ -1,8 +1,8 @@
-import { ConfigService } from "@nestjs/config";
+import { ConfigService } from '@nestjs/config';
 import { JwtService as DefaultJwtService } from '@nestjs/jwt';
 import { Injectable, UnauthorizedException } from '@nestjs/common';
 
-import {JwtModel, JwtPayloadModel} from "./models";
+import { JwtModel, JwtPayloadModel } from './models';
 
 @Injectable()
 export class JwtService {

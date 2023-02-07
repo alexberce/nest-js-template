@@ -1,5 +1,5 @@
-import {MongoServerError} from 'mongodb';
-import {HttpException, HttpStatus} from '@nestjs/common';
+import { MongoServerError } from 'mongodb';
+import { HttpException, HttpStatus } from '@nestjs/common';
 
 export class MongoDatabaseException extends HttpException {
   constructor(exception: MongoServerError) {
@@ -22,6 +22,6 @@ export class MongoDatabaseException extends HttpException {
       break;
     }
 
-    super({message}, status);
+    super({ message }, status);
   }
 }

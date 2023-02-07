@@ -12,16 +12,16 @@ import {
 } from '@nestjs/common';
 
 /** Libs Imports **/
-import { JwtModel } from "../../libs/security/jwt";
+import { JwtModel } from '../../libs/security/jwt';
 
 /** Cross-Module Imports **/
-import { EUserStatus } from "../user";
+import { EUserStatus } from '../user';
 
 /** Local Imports **/
 import { SignUpDto } from './dto';
-import { LocalAuthGuard } from "./guards";
-import { RequestWithUser } from "./types";
-import { AuthService } from "./auth.service";
+import { LocalAuthGuard } from './guards';
+import { RequestWithUser } from './types';
+import { AuthService } from './auth.service';
 
 @ApiTags('Auth')
 @Controller('auth')

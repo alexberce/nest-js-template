@@ -1,5 +1,5 @@
+import { Types } from 'mongoose';
 import { Type } from 'class-transformer';
-import { ObjectId, Types } from 'mongoose';
 import { ApiProperty } from '@nestjs/swagger';
 
 /** Local Imports **/

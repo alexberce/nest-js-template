@@ -3,10 +3,10 @@ import { ApiProperty } from '@nestjs/swagger';
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
 
 /** Libs Imports **/
-import {AbstractDocument, defaultSchemaOptions} from "../../libs/database/mongo";
+import { AbstractDocument, defaultSchemaOptions } from '../../libs/database/mongo';
 
 /** Local Imports **/
-import { EUserRole, EUserStatus } from "./enums";
+import { EUserRole, EUserStatus } from './enums';
 
 @Schema({ ...defaultSchemaOptions, collection: 'users' })
 export class User extends AbstractDocument {

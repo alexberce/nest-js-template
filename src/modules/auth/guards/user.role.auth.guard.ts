@@ -1,7 +1,7 @@
 import { CanActivate, ExecutionContext, mixin, Type } from '@nestjs/common';
 
 /** Cross-Module Imports **/
-import { EUserRole } from "../../user";
+import { EUserRole } from '../../user';
 
 export const UserRoleGuard = (...roles: EUserRole[]): Type<CanActivate> => {
   class RoleGuardMixin implements CanActivate {
@@ -14,4 +14,4 @@ export const UserRoleGuard = (...roles: EUserRole[]): Type<CanActivate> => {
   }
 
   return mixin(RoleGuardMixin);
-}
+};

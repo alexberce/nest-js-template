@@ -1,14 +1,14 @@
 import { Injectable, UnauthorizedException } from '@nestjs/common';
 
 /** Libs Imports **/
-import { EncryptionService } from "../../libs/security/encryption";
-import { JwtModel, JwtService, JwtType } from "../../libs/security/jwt";
+import { EncryptionService } from '../../libs/security/encryption';
+import { JwtModel, JwtService, JwtType } from '../../libs/security/jwt';
 
 /** Cross-Module Imports **/
-import { User, UserService } from "../user";
+import { User, UserService } from '../user';
 
 /** Local Imports **/
-import { SignUpDto } from "./dto";
+import { SignUpDto } from './dto';
 
 @Injectable()
 export class AuthService {

@@ -2,9 +2,9 @@ import { Module } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
 
 /** Local Imports **/
-import { UserModule } from "./modules/user";
+import { UserModule } from './modules/user';
 import { validate } from './config/validation';
-import { AuthModule } from "./modules/auth";
+import { AuthModule } from './modules/auth';
 
 @Module({
   imports: [

@@ -3,10 +3,10 @@ import { PassportStrategy } from '@nestjs/passport';
 import { Injectable, UnauthorizedException } from '@nestjs/common';
 
 /** Cross-Module Imports **/
-import { User } from "../../user";
+import { User } from '../../user';
 
 /** Local Imports **/
-import { AuthService } from "../auth.service";
+import { AuthService } from '../auth.service';
 
 @Injectable()
 export class LocalAuthStrategy extends PassportStrategy(Strategy) {
