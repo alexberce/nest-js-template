@@ -1,7 +1,7 @@
-import { ApiProperty } from "@nestjs/swagger";
-import { SchemaTypes, Types } from 'mongoose';
+import { Types } from 'mongoose';
+import { ApiProperty } from '@nestjs/swagger';
 import { Prop, Schema } from '@nestjs/mongoose';
-import { Exclude, Transform, Type } from "class-transformer";
+import { Exclude, Transform, Type } from 'class-transformer';
 
 export const defaultSchemaOptions = {versionKey: false, virtuals: true, timestamps: true, toJSON: { virtuals: true }};
 
@@ -9,7 +9,6 @@ export const defaultSchemaOptions = {versionKey: false, virtuals: true, timestam
 export class AbstractDocument {
   @Exclude()
   @Type(() => String)
-  @Prop({ type: SchemaTypes.ObjectId })
   @ApiProperty({ name: 'id', type: String })
   @Transform(({ value }) => value.toString())
   _id: Types.ObjectId;

@@ -1,3 +1,5 @@
+export * from './exceptions';
+
 export * from './abstract.schema';
 export * from './abstract.repository';
 export * from './mongo.database.module';
